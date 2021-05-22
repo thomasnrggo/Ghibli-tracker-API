@@ -24,6 +24,7 @@ class Movies(models.Model):
     rt_score = models.IntegerField()
     music = models.CharField(max_length=32)
     cover_url = models.URLField()
+    wiki_url = models.URLField()
 
     def __str__(self):
-        return f"Movie title: {self.title}"
+        return {self.title}
