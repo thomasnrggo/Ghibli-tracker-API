@@ -3,6 +3,10 @@ import uuid
 
 
 class Movies(models.Model):
+    """Movies model.
+
+    The list of all Ghibli Studio movies along with their information.
+    """
 
     class Meta:
         verbose_name = 'Movie'
@@ -22,4 +26,4 @@ class Movies(models.Model):
     cover_url = models.URLField()
 
     def __str__(self):
-        return self.title
+        return f"Movie title: {self.title}"
