@@ -6,7 +6,7 @@ from .serializers import MovieSerializer
 
 
 @api_view(['GET', 'POST'])
-def movie(request):
+def movies(request):
 
     if request.method == 'GET':
         snippets = Movies.objects.all()

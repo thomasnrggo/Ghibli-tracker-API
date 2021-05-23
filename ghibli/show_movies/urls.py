@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import movie
+from .views import movies
 
 urlpatterns = [
-    path('movie/', movie, name='movie'),
+    path('api/movies/', movies, name='movies'),
 ]
