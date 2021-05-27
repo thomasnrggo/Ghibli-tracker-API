@@ -16,8 +16,8 @@ class Ratings(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     emoji_rating = models.IntegerField()
     star_rating = models.IntegerField()
-    user_id = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    movie_id = models.ForeignKey(Movies, on_delete=models.CASCADE)
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Star rating: {self.star_rating}, emoji rating: {self.emoji_rating}"
