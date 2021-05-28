@@ -6,4 +6,12 @@ The backend was built using Django 3.2.3. The reason to choose Django is that th
 
 To run the proyect, you can either clone the repository or download the .zip fle from github. As Django is a Python Framework, you need to have Python 3 installed. It is reccomended to start a virtual environment with the "python -m venv name" command in the Command Line Interface. after that, you can install the requirements needed using the <pip install -r requirements.txt> command, which will install the additional frameworks (django included) and libreries needed for the project.
 
-Once you have successfully installed all requirements, you can run the project using the "python manage.py runserver" command, which will start a server in the url "127.0.0.1:8000". You can then access <127.0.0.1:8000/films> to have access to all the films in the database. This project will also be abailable in Heroku.
+Once you have successfully installed all requirements, you can run the project using the "python manage.py runserver" command, which will start a server in the url "127.0.0.1:8000". You can then access "127.0.0.1:8000/films" to have access to all the films in the database. This project is also abailable in Heroku https://masterghibli.herokuapp.com/
+
+The site has the following routes:
+  
+https://masterghibli.herokuapp.com/admin a login page where you have access to tje data in the database and can modify, add, delete or create a user, film or rating
+  
+https://masterghibli.herokuapp.com/films where you can have access to the API for the films in a JSON format
+  
+https://masterghibli.herokuapp.com/profiles where you can have access to the users' information
