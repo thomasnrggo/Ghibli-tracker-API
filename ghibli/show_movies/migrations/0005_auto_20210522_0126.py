@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='movies',
-            name='cover_url',
+            name='poster_url',
             field=models.URLField(),
         ),
     ]

@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='movies',
-            name='cover_url',
+            name='poster_url',
             field=models.ImageField(blank=True, null=True, upload_to='movies/covers'),
         ),
     ]
