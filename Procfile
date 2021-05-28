@@ -1,1 +1,1 @@
-web: gunicorn ghibli.ghibli.wsgi --log-file -
+web: gunicorn ghibli.wsgi --log-file -
