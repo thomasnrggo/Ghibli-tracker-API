@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('running_time', models.IntegerField()),
                 ('rt_score', models.IntegerField()),
                 ('music', models.CharField(max_length=32)),
-                ('poster_url', models.URLField()),
+                ('cover_url', models.URLField()),
             ],
         ),
     ]
