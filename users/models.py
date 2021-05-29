@@ -8,6 +8,7 @@ class Profile(models.Model):
     Proxy model that extends the base data with other information.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    username = models.CharField(max_length=32)
     avatar_url = models.URLField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
