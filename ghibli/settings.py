@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Own apps
     'show_movies',
-    'users',
-    'ratings',
     # External apps
     'rest_framework',
 
