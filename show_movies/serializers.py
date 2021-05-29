@@ -1,15 +1,15 @@
 from rest_framework import serializers
 from .models import Movies, Ratings
-from .models import Profile
+from .models import Profiles
 
 
-class ProfileSerializer(serializers.ModelSerializer):
+class ProfilesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Profile
+        model = Profiles
         fields = '__all__'
 
 
-class MovieSerializer(serializers.ModelSerializer):
+class MoviesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movies
         fields = '__all__'
@@ -19,4 +19,3 @@ class RatingsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ratings
         fields = '__all__'
-

@@ -1,8 +1,9 @@
-from django.urls import path
-from .views import get_movies, get_ratings, profile
+from .api import ProfilesViewSet, RatingsViewSet, MoviesViewSet
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = [
-    path('films/', get_movies, name='films'),
-    path('ratings/', get_ratings, name='ratings'),
-    path('profiles/', profile, name='profiles'),
-]
+router = DefaultRouter()
+router.register(r'profiles', ProfilesViewSet)
+router.register(r'ratings', RatingsViewSet)
+router.register(r'films', MoviesViewSet)
+
+urlpatterns = router.urls

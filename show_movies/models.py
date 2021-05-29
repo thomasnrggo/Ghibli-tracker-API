@@ -3,11 +3,14 @@ import uuid
 from django.contrib.auth.models import User
 
 
-class Profile(models.Model):
+class Profiles(models.Model):
     """Profile model.
 
     Proxy model that extends the base data with other information.
     """
+    class Meta:
+        verbose_name = 'Profile'
+        verbose_name_plural = 'Profiles'
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=32)
     avatar_url = models.URLField()
@@ -59,7 +62,7 @@ class Ratings(models.Model):
     emoji_rating = models.IntegerField()
     star_rating = models.IntegerField()
     watched = models.BooleanField(default=False)
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    user = models.ForeignKey(Profiles, on_delete=models.CASCADE)
     movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
 
     def __str__(self):
