@@ -33,16 +33,16 @@ class Movies(models.Model):
         verbose_name_plural = 'Movies'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(max_length=32)
-    original_title = models.CharField(max_length=32)
-    original_title_romanised = models.CharField(max_length=32)
+    title = models.CharField(max_length=64)
+    original_title = models.CharField(max_length=64)
+    original_title_romanised = models.CharField(max_length=64)
     description = models.TextField()
-    director = models.CharField(max_length=32)
-    producer = models.CharField(max_length=32)
+    director = models.CharField(max_length=64)
+    producer = models.CharField(max_length=255)
     release_date = models.IntegerField()
     running_time = models.IntegerField()
     rt_score = models.IntegerField()
-    music = models.CharField(max_length=32)
+    music = models.CharField(max_length=64)
     cover_url = models.URLField()
     wiki_url = models.URLField()
 
