@@ -62,7 +62,7 @@ class Ratings(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     emoji_rating = models.IntegerField()
     star_rating = models.IntegerField()
-    watched = models.BooleanField(default=False)
+    watched = models.BooleanField(default=True)
     user = models.ForeignKey(Profiles, on_delete=models.CASCADE)
     movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
 
