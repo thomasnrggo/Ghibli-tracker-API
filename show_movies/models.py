@@ -13,6 +13,9 @@ class Profiles(models.Model):
         verbose_name_plural = 'Profiles'
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=32)
+    # first_name = models.CharField(max_length=64)
+    # last_name = models.CharField(max_length=64)
+    # password = models.CharField(max_length=64)
     avatar_url = models.URLField()
     email = models.EmailField()
     created = models.DateTimeField(auto_now_add=True)
