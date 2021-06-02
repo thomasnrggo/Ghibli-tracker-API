@@ -1,8 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
-
+from django.contrib.auth.models import User
 from .serializers import ProfilesSerializer, MoviesSerializer, RatingsSerializer
 from .models import Profiles, Movies, Ratings
+
+from rest_framework import status
+from rest_framework.response import Response
 
 
 # class ProfilesViewSet(ModelViewSet):
@@ -18,6 +21,9 @@ def profile(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = ProfilesSerializer(data=request.data)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = User.object.create_user(username=username, password=password)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
