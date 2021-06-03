@@ -7,10 +7,10 @@ class Profiles(models.Model):
         verbose_name = 'Profile'
         verbose_name_plural = 'Profiles'
     username = models.CharField(max_length=32)
-    first_name = models.CharField(max_length=64)
-    last_name = models.CharField(max_length=64)
-    password = models.CharField(max_length=64)
-    avatar_url = models.URLField()
+    first_name = models.CharField(max_length=64, blank=True)
+    last_name = models.CharField(max_length=64, blank=True)
+    password = models.CharField(max_length=64, blank=True)
+    avatar_url = models.URLField(blank=True)
     email = models.EmailField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
