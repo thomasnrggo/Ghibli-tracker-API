@@ -1,17 +1,11 @@
 from django.db import models
 import uuid
-from django.contrib.auth.models import User
 
 
 class Profiles(models.Model):
-    """Profile model.
-
-    Proxy model that extends the base data with other information.
-    """
     class Meta:
         verbose_name = 'Profile'
         verbose_name_plural = 'Profiles'
-    # user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=32)
     first_name = models.CharField(max_length=64)
     last_name = models.CharField(max_length=64)
@@ -22,7 +16,7 @@ class Profiles(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"User {self.user.username}"
+        return f"User {self.username}"
 
 
 class Movies(models.Model):

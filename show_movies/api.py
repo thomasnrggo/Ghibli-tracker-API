@@ -1,18 +1,13 @@
-# from rest_framework.decorators import api_view
-# from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
 from .serializers import ProfilesSerializer, MoviesSerializer, RatingsSerializer
 from .models import Profiles, Movies, Ratings
-
-# from rest_framework import status
-# from rest_framework.response import Response
 
 
 class ProfilesViewSet(ModelViewSet):
     queryset = Profiles.objects.all()
     serializer_class = ProfilesSerializer
 
-#
+
 # @api_view(['GET', 'POST'])
 # def profile(request):
 #     if request.method == 'GET':

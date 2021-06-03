@@ -1,6 +1,5 @@
 from .api import ProfilesViewSet, RatingsViewSet, MoviesViewSet
 from rest_framework.routers import DefaultRouter
-from django.urls import path
 
 router = DefaultRouter()
 router.register(r'profiles', ProfilesViewSet)
