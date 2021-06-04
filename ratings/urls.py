@@ -1,6 +1,6 @@
 from django.urls import path
-from ratings.views import rating
+from ratings.api import RatingsList
 
 urlpatterns = [
-    path('ratings/', rating, name='Ratings')
+    path('ratings/', RatingsList.as_view())
 ]

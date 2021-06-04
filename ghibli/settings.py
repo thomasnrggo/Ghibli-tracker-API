@@ -48,8 +48,10 @@ INSTALLED_APPS = [
     'ratings',
     # External apps
     'rest_framework',
+    'django_filters',
 
 ]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
