@@ -11,7 +11,7 @@ class Profiles(models.Model):
     last_name = models.CharField(max_length=64, blank=True)
     password = models.CharField(max_length=64, blank=True)
     avatar_url = models.URLField(blank=True)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
