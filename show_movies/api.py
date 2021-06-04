@@ -15,13 +15,7 @@ class ProfilesViewSet(ModelViewSet):
 #         serializer = ProfilesSerializer(snippets, many=True)
 #         return Response(serializer.data)
 #     elif request.method == 'POST':
-#         serializer = ProfilesSerializer(data=request.data)
-#         username = request.POST['username']
-#         password = request.POST['password']
-#         user = User.object.create_user(username=username, password=password)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         serializer = ProfilesSerializer(data=request.data)4444444EATED)
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
