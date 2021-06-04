@@ -4,7 +4,7 @@ from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
 
 
-class RatingsList(generics.ListAPIView):
+class RatingsList(generics.ListCreateAPIView):
     queryset = Ratings.objects.all()
     serializer_class = RatingsSerializer
     filter_backends = [DjangoFilterBackend]
