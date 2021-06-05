@@ -6,20 +6,29 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 class RatingsList(mixins.ListModelMixin,
                   mixins.CreateModelMixin,
-                  mixins.UpdateModelMixin,
-                  mixins.DestroyModelMixin,
                   generics.GenericAPIView):
     queryset = Ratings.objects.all()
     serializer_class = RatingsSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['user', 'movie']
-    lookup_field = 'user'
+    # lookup_field = 'user'
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
+
+class RatingsUpdateDelete(mixins.RetrieveModelMixin,
+                          mixins.UpdateModelMixin,
+                          mixins.DestroyModelMixin,
+                          generics.GenericAPIView):
+    queryset = Ratings.objects.all()
+    serializer_class = RatingsSerializer
+
+    def get(self, request, pk):
+        return self.retrieve(request, pk)
 
     def put(self, request, *args, **kwargs):
         return self.update(request, *args, **kwargs)
