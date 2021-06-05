@@ -14,7 +14,6 @@ class Profiles(models.Model):
     email = models.EmailField(unique=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    thumbnail = models.URLField(blank=True)
 
     def __str__(self):
         return f"User {self.username}"
@@ -43,6 +42,7 @@ class Movies(models.Model):
     music = models.CharField(max_length=64)
     cover_url = models.URLField()
     wiki_url = models.URLField()
+    thumbnail = models.URLField(blank=True)
 
     def __str__(self):
         return self.title
