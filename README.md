@@ -15,3 +15,5 @@ https://masterghibli.herokuapp.com/admin a login page where you have access to t
 https://masterghibli.herokuapp.com/films where you can have access to the API for the films in a JSON format
   
 https://masterghibli.herokuapp.com/profiles where you can have access to the users' information
+
+https://masterghibli.herokuapp.com/ratings where you have access to all the ratings currently in the database. You can also filter the results using https://masterghibli.herokuapp.com/<id:int> where it will display the ratings for each user (each id is the user primary key). The assignment was requested by Erik Ochoa and bult by Luis Loaeza.
